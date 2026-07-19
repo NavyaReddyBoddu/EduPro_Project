@@ -15,8 +15,10 @@ st.set_page_config(
 # -------------------------------
 # Load Machine Learning Model
 # -------------------------------
-BASE_DIR = Path(__file__).resolve().parent.parent
-MODEL_PATH = BASE_DIR / "models" / "enrollment_model.pkl"
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent
+MODEL_PATH = BASE_DIR / "enrollment_model.pkl"
 
 model = joblib.load(MODEL_PATH)
 
